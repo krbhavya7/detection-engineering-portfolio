@@ -1,4 +1,4 @@
-# Project 1: Detection Coverage Map
+# Project: Detection Coverage Map
 
 ## Objective
 Map current detection coverage for the Credential Access tactic (MITRE ATT&CK) before
