@@ -1,0 +1,195 @@
+{
+	"name": "layer",
+	"versions": {
+		"attack": "19",
+		"navigator": "5.3.2",
+		"layer": "4.5"
+	},
+	"domain": "enterprise-attack",
+	"description": "",
+	"filters": {
+		"platforms": [
+			"Windows",
+			"IaaS",
+			"Linux",
+			"macOS",
+			"SaaS",
+			"ESXi",
+			"Network Devices",
+			"PRE",
+			"Containers",
+			"Office Suite",
+			"Identity Provider"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false,
+		"expandedSubtechniques": "none"
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1003",
+			"tactic": "credential-access",
+			"color": "#74c476",
+			"comment": "Sysmon Event ID 10 (process access to lsass.exe) is a mature, widely-used detection pattern most SIEMs ship built-in.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1539",
+			"tactic": "credential-access",
+			"color": "#fc3b3b",
+			"comment": "No telemetry targets browser cookie database access specifically; would need EDR-level file monitoring.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "credential-access",
+			"color": "#fc3b3b",
+			"comment": "Passive sniffing doesn't generate host-based log events; would need network-level (NDR) monitoring, not in this telemetry set.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1040",
+			"tactic": "discovery",
+			"color": "#fc3b3b",
+			"comment": "Passive sniffing doesn't generate host-based log events; would need network-level (NDR) monitoring, not in this telemetry set.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1555",
+			"tactic": "credential-access",
+			"color": "#fcf26b",
+			"comment": "Sysmon logs process access to browser/vault files, but no tuned rule exists for known credential-store paths yet.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "#fce93b",
+			"comment": "Command-line credential exposure is visible via Sysmon process creation logs, but no active scan for creds in files/scripts",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1649",
+			"tactic": "credential-access",
+			"color": "#fc3b3b",
+			"comment": "4769 events are logged, but no tuned rule exists for encryption-downgrade (Kerberoasting) or anomalous TGT lifetimes.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"color": "#fcf26b",
+			"comment": "Classic brute force caught via 4625 threshold rule, but slow password-spray attempts would likely evade it.\n",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "collection",
+			"color": "#fc3b3b",
+			"comment": "Keylogging via API hooking evades standard Windows Security logs; needs EDR behavioral monitoring on hook APIs.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1056",
+			"tactic": "credential-access",
+			"color": "#fc3b3b",
+			"comment": "Keylogging via API hooking evades standard Windows Security logs; needs EDR behavioral monitoring on hook APIs.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1111",
+			"tactic": "credential-access",
+			"color": "#fc3b3b",
+			"comment": "Not visible in Windows host logs; requires identity provider (e.g., Entra ID) sign-in log analysis, which isn't in scope yet.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1556",
+			"tactic": "defense-impairment",
+			"color": "#fc3b3b",
+			"comment": "Registry keys tied to auth package/SSP modification aren't monitored today; needs a purpose-built registry-value detection.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1556",
+			"tactic": "persistence",
+			"color": "#fc3b3b",
+			"comment": "Registry keys tied to auth package/SSP modification aren't monitored today; needs a purpose-built registry-value detection.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1556",
+			"tactic": "credential-access",
+			"color": "#fc3b3b",
+			"comment": "Registry keys tied to auth package/SSP modification aren't monitored today; needs a purpose-built registry-value detection.",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ff6666ff",
+			"#ffe766ff",
+			"#8ec843ff"
+		],
+		"minValue": 0,
+		"maxValue": 100
+	},
+	"legendItems": [],
+	"metadata": [],
+	"links": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false,
+	"selectVisibleTechniques": false
+}
