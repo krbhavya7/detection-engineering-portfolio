@@ -43,6 +43,18 @@ be detected?"*
 **Summary:** 1 Strong, 3 Partial, 6 None out of 10 techniques assessed.
 An ATT&CK Navigator heatmap showing current detection coverage for a chosen tactic,
 with reasoning for each rating.
+- I'd validate these ratings empirically rather than by assumption. Several "Strong" or
+  "Partial" calls (e.g., OS Credential Dumping) are based on knowing the detection pattern
+  exists industry-wide, not on confirming it fires in a real environment. Project 2 closes
+  that gap by generating actual telemetry to test against.
+- I'd extend scoring beyond a binary "does telemetry exist" question to include estimated
+  false-positive rate. A technique can be technically detectable and still be practically
+  unusable if the rule is too noisy for an analyst to act on.
+- I'd assess more than one tactic before drawing conclusions. Credential Access alone doesn't
+  tell you whether an attacker's full kill chain would be caught; a technique's real risk
+  depends on what happens before and after it.
+- I'd version this map. ATT&CK itself changes over time (new techniques, retired ones), and so
+  does an environment's logging. A coverage map is only accurate for the day it was made.
 
 ## Limitations
 - This is a desk assessment based on typical enterprise telemetry, not a measured result from
