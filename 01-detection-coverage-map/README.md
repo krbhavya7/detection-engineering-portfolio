@@ -27,11 +27,12 @@ layer (`navigator-layer.json`) as per-technique comments.
 | Multi-Factor Authentication Interception | None | Not visible in host logs; needs identity provider (e.g., Entra ID) sign-in logs. |
 
 **Summary:** 1 Strong, 3 Partial, 6 None out of 10 techniques assessed.
+An ATT&CK Navigator heatmap showing current detection coverage for a chosen tactic,
+with reasoning for each rating.
+
 
 ## Next steps
 These gaps directly inform which detections to prioritize building next.# Project 1: Detection Coverage Map
 
-Status: In progress
+Status: Complete
 
-An ATT&CK Navigator heatmap showing current detection coverage for a chosen tactic,
-with reasoning for each rating.
