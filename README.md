@@ -7,7 +7,7 @@ Hands-on projects in detection engineering, threat hunting, and SOC operations, 
 | # | Project | Focus |
 |---|---------|-------|
 | 01 | [Detection Coverage Map](./01-detection-coverage-map) | ATT&CK coverage heatmap |
-| 02 | Home SOC Lab Pipeline | SIEM ingestion, KQL/SPL |
+| 02 | SOC Lab Pipeline | SIEM ingestion, KQL/SPL |
 | 03 | Threat Hunt Report | Hypothesis-driven hunting |
 | 04 | Sigma Rule Library | Detection engineering |
 | 05 | SOAR Triage Playbook | Alert automation |
