@@ -46,7 +46,7 @@ with reasoning for each rating.
 
 ## Limitations
 - This is a desk assessment based on typical enterprise telemetry, not a measured result from
-  a live environment — Project 2 builds the actual lab to validate or correct these ratings.
+  a live environment; Project 2 builds the actual lab to validate or correct these ratings.
 - Only top-level techniques were scored; sub-techniques (e.g., specific Kerberoasting variants)
   may have different individual coverage.
 - Ratings reflect detection *capability*, not alerting maturity (e.g., whether an analyst would
